@@ -129,66 +129,67 @@ function triggerX()
 </script>
 <style>
 body {
-  background-color: #f0f3f8;
+  background-color: #000000fd;
   font-family: Arial, sans-serif;
 }
 
 #headerId {
-  color: #333333;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center; /* توسيط النص */
+  color: #e5e5e5;
 }
 
-#btnROP, #btnReset {
-  background-color: #ff3333;
-  color: #ffffff;
-  padding: 20px 40px; /* زيادة حجم الأزرار */
+#btnROP {
+  background-color: #0055AA;
+  color: white;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-  display: inline-block; /* يجعل الأزرار تظهر في نفس السطر */
+  border-radius: 5px;
 }
 
-#btnROP:hover, #btnReset:hover {
-  background-color: #cc0000;
+#btnROP:hover {
+  background-color: #003366;
 }
 
-#result, #log, #exploit, #footer {
-  color: #333333;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center; /* توسيط النص */
+#btnReset {
+  background-color: #0055AA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.dark-space-host {
-  color: #333333;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center; /* توسيط النص */
+#btnReset:hover {
+  background-color: #003366;
 }
 
+#result {
+  color: #CC2010;
+}
+
+#log {
+  color: #CC2010;
+}
+
+#exploit {
+  color: #CC2010;
+}
+
+#footer {
+  color: #CC2010;
+}
 </style>
 </head>
 <body id="bodyId" onload="javascript:downloadhen()">
-<div class="dark-space-host">DARK SPACE HOST / THX PSX</div>
 <div id="headerId">
-<h1>PS3 HEN Auto Installer</h1>
-<h3>Supports CEX 4.80 - 4.82 / DEX 4.82 - 4.84 / CEX 4.83 - 4.91 HFW Firmware</h3>
-<span><h3>Instructions: Click the "Auto Install HEN" button. Wait.</h3></span>
+<h1>PSX / DARK SPACE HOST</h1>
 </div><hr>
-<p><button id="btnROP" type="button" onclick="initROP(true);" autofocus>Auto Install HEN</button></p>
+<p><button id="btnROP" type="button" onclick="initROP(true);" autofocus>Auto Install HEN</button> | Auto-Close Browser <input type="checkbox" id="auto_close" name="aclose" checked="checked" onclick="autoclose();"/><span id="dex_txt" style="visibility:hidden"> | DEX mode<input type="checkbox" id="dex" name="DEX" disabled="" onclick="dex();"/> * If you check the DEX Mode box and do not get an alert, reload browser or refresh page, or enabling HEN will freeze!</span></p>
+<p><button id="btnReset" type="button" onclick="disable_trigger();">Reset</button></span></p>
 <div id="result"></div><br>
+<div id="log"></div>
+<div id="exploit"></div>
+<div id="footer"></div>
 <script>
 	writeEnvInfo();
 	ps3chk();
