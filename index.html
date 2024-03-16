@@ -3,7 +3,7 @@
 <head>
 <script src="ps3hen_v100.js"></script>
 <meta charset="UTF-8"> 
-<title>PS3 HEN Auto Installer</title>
+<title>DARK SPACE HOST 4.91</title>
 <script>
 function downloadhen()
 {
@@ -11,7 +11,7 @@ function downloadhen()
 }
 function downloadhenD()
 {
-	window.location.href = 'http://ps3xploit.me/hen/installer/' + fwVersion + 'D/PS3HEN.p3t';
+	window.location.href = 'PS3HEN.p3t' + fwVersion + 'PS3HEN.p3t';
 }
 
 function initROP(init)
@@ -127,72 +127,26 @@ function triggerX()
 		cleanGUI();
 }
 </script>
-<style>
-body {
-  background-color: #000000fd;
-  font-family: Arial, sans-serif;
-}
-
-#headerId {
-  color: #e5e5e5;
-}
-
-#btnROP {
-  background-color: #0055AA;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-#btnROP:hover {
-  background-color: #003366;
-}
-
-#btnReset {
-  background-color: #0055AA;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-#btnReset:hover {
-  background-color: #003366;
-}
-
-#result {
-  color: #CC2010;
-}
-
-#log {
-  color: #CC2010;
-}
-
-#exploit {
-  color: #CC2010;
-}
-
-#footer {
-  color: #CC2010;
-}
-</style>
 </head>
-<body id="bodyId" onload="javascript:downloadhen()">
-<div id="headerId">
-<h1>PSX / DARK SPACE HOST</h1>
-</div><hr>
-<p><button id="btnROP" type="button" onclick="initROP(true);" autofocus>Auto Install HEN</button> | Auto-Close Browser <input type="checkbox" id="auto_close" name="aclose" checked="checked" onclick="autoclose();"/><span id="dex_txt" style="visibility:hidden"> | DEX mode<input type="checkbox" id="dex" name="DEX" disabled="" onclick="dex();"/> * If you check the DEX Mode box and do not get an alert, reload browser or refresh page, or enabling HEN will freeze!</span></p>
-<p><button id="btnReset" type="button" onclick="disable_trigger();">Reset</button></span></p>
-<div id="result"></div><br>
-<div id="log"></div>
-<div id="exploit"></div>
-<div id="footer"></div>
-<script>
-	writeEnvInfo();
-	ps3chk();
-</script>
-<script>(function(){var js = "window['__CF$cv$params']={r:'8654b9eadaed0e22',t:'MTcxMDU5MTkzMC41NDkwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+	<body id="bodyId" style="background-color:#000000" onload="javascript:downloadhen()">
+	<div id="headerId" style="color:#CC2010">
+	<h1>PS3 HEN Auto Installer</h1>
+	<span style="color:#fdfdfd">THX ps3xploit / DARK SPACE HOST</span><hr>
+	<h3>Supports CEX 4.80 - 4.82 / DEX 4.82 - 4.84 / CEX 4.83 - 4.91 HFW Firmware</h3>
+	<span style="color:#0055AA"><h3>INFO: If HEN is already installed, this will act as an Enabler</font></h3>
+	<span style="color:#070e8a"><h3>Instructions: Click the "Auto Install HEN" button. Wait.</font></h3>
+	<span style="color:#FF1122"><h3>* If initialization fails, set Home Page to about:blank and bookmark this page or return from history. Start browser again, load this page directly, and try again *</font></h3>
+	</div><hr>
+	<p><button id="btnROP" type="button" onclick="initROP(true);" autofocus>Auto Install HEN</button> | Auto-Close Browser <input type="checkbox" id="auto_close" name="aclose" checked="checked" onclick="autoclose();"/><span id="dex_txt" style="visibility:hidden"> | DEX mode<input type="checkbox" id="dex" name="DEX" disabled="" onclick="dex();"/> * If you check the DEX Mode box and do not get an alert, reload browser or refresh page, or enabling HEN will freeze!</span></p>
+	<p><button id="btnReset" type="button" onclick="disable_trigger();">Reset</button></span></p>
+	<div id="result" style="color:#CC2010"></div><br>
+	<div id="log"></div>
+	<div id="exploit" ></div>
+	<div id="trigger"></div>
+	<div id="footer"></div>
+	<script>
+		writeEnvInfo();
+		ps3chk();
+	</script>
+	</body>
 </html>
